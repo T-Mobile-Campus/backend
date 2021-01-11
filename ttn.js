@@ -1,6 +1,9 @@
+const express = require('express')
+const app = express()
 const ttn = require("ttn")
 const dotenv = require("dotenv");
 require("dotenv").config();
+
 
 const appID = process.env.APP_ID
 const accessKey = process.env.ACCESS_KEY
@@ -11,7 +14,7 @@ let sioux = {}
 ttn.data(appID, accessKey)
   .then(function (client) {
     client.on("uplink", function (devID, payload) {
-      console.log("Received uplink from ", devID)
+      sioux.lum = payload.payload_fields.lum
       console.log(payload.payload_fields)
     })
   })
@@ -22,6 +25,7 @@ ttn.data(appID, accessKey)
 
 sioux.smoke_signal = (device, payload) => {
   client.send(device, payload,1)
+  console.log('smoke signal sent')
 }
 
 module.exports = sioux
