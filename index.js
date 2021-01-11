@@ -24,21 +24,19 @@ const server = app.listen(port, () => {
 
 const io = require('socket.io')(server, {
   cors: {
-    origin: "http://127.0.0.1:5500",
-    methods: ["GET", "POST"],
-    allowedHeaders: ["sioux"],
-    credentials: true
+    // origin: "http://localhost:8080",
+    methods: ["GET", "POST"]
   }
 });
 
 
 io.on("connection",  function (socket) {
   console.log("connected:" + socket.id);
+  socket.emit("lum", 'hello')
   sioux.eventEmitter.on("lum", data => {
     socket.emit("lum", data)
   })
 });
 
 const sioux = require('./ttn.js')
-
 
