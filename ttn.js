@@ -1,9 +1,9 @@
-const ttn = require("ttn")
+const ttn = require("ttn");
 const dotenv = require("dotenv");
 require("dotenv").config();
 
-const appID = process.env.APP_ID
-const accessKey = process.env.ACCESS_KEY
+const appID = "le-super-lorawan-id734";
+const accessKey = "ttn-account-v2.yUBNrE1zHg79McFMTqOC7wBjxswJlZ4zWDjabqFa61g";
 const client = new ttn.DataClient(appID, accessKey, 'eu.thethings.network:1883');
 
 let sioux = {}
