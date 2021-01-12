@@ -7,24 +7,16 @@ const fs = require("fs");
 require("dotenv").config();
 const sioux = require('./ttn.js')
 const cors = require('cors')
-<<<<<<< HEAD
-
-router.get("/sioux/:device/:smoke", cors(),  (req, res, next) => {
-=======
 const mong = require('./dbnul.js')
 
 router.get("/sioux/:device/:smoke", cors(),  (req, res, next) => {
-  console.log('hey')
->>>>>>> 74abc4f8db41d65946afee567eded767e8846a63
   sioux.smoke_signal(req.params.device, req.params.smoke)
   res.status(200).json({smoke_signal:true})
 });
 
 router.get("/sioux/lum", (req, res, next) => {
-<<<<<<< HEAD
   res.status(200).json({ lum: sioux.lum })
 })
-=======
   res.status(200).json( mong.results )
 })
 
@@ -34,7 +26,6 @@ router.get("/:clust/:collec", cors(), (req, res, next)=>{
 })
 
 
->>>>>>> 74abc4f8db41d65946afee567eded767e8846a63
 
 router.use("/images", express.static(path.join(__dirname, "images")));
 
