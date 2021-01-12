@@ -14,7 +14,7 @@ router.get("/sioux/:device/:smoke", cors(),  (req, res, next) => {
   res.status(200).json({smoke_signal:true})
 });
 
-router.get("/sioux/lum", (req, res, next) => {
+router.get("/sioux/lum",cors(), (req, res, next) => {
   mong.fetch()
   res.status(200).json( mong.results )
 })
