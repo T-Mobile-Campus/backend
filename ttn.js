@@ -1,13 +1,11 @@
-const express = require('express')
-const app = express()
-const ttn = require("ttn")
+const ttn = require("ttn");
 const dotenv = require("dotenv");
 require("dotenv").config();
 var events = require('events');
 var eventEmitter = new events.EventEmitter();
 
-const appID = process.env.APP_ID
-const accessKey = process.env.ACCESS_KEY
+const appID = "le-super-lorawan-id734";
+const accessKey = "ttn-account-v2.yUBNrE1zHg79McFMTqOC7wBjxswJlZ4zWDjabqFa61g";
 const client = new ttn.DataClient(appID, accessKey, 'eu.thethings.network:1883');
 
 let sioux = {}
@@ -18,7 +16,11 @@ ttn.data(appID, accessKey)
   .then(function (client) {
     client.on("uplink", function (devID, payload) {
       sioux.lum = payload.payload_fields.lum
-      sioux.eventEmitter.emit("lum", sioux.lum)
+      sioux.temp = payload.payload_fields.temp
+      sioux.eventEmitter.emit("update", {
+        lum: sioux.lum,
+        temp: sioux.temp
+      })
       console.log(payload.payload_fields)
     })
   })
