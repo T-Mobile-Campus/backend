@@ -15,12 +15,13 @@ router.get("/sioux/:device/:smoke", cors(),  (req, res, next) => {
 });
 
 router.get("/sioux/lum", (req, res, next) => {
+  mong.fetch()
   res.status(200).json( mong.results )
 })
 
 router.get("/:clust/:collec", cors(), (req, res, next)=>{
- listed =  mong.listed(req.params.clust, req.params.collec)
-  res.status(200).json(listed)
+ mong.fetch(req.params.clust, req.params.collec)
+  res.status(200).json(mong.results)
 })
 
 

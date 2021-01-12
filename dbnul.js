@@ -2,7 +2,7 @@ const { MongoClient } = require('mongodb');
 const mong = require('./dbconnect');
 
 
-async function main() {
+mong.fetch = async function(clust = null, collec = null) {
     /**
      * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
      * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
@@ -20,6 +20,7 @@ async function main() {
         await client.connect();
 
         await findLights(client);
+        if(clust && collec) await mong.listed(client, clust, collec)
 
     } finally {
         // Close the connection to the MongoDB cluster
@@ -28,7 +29,7 @@ async function main() {
     return client
 }
 
- main().catch(console.error);
+ mong.fetch().catch(console.error);
 
 
 async function findLights(client) {
@@ -55,21 +56,21 @@ async function findLights(client) {
     }
 }
 
- mong.listed = (clust, collec) => {
-  const cursor = client.db(clust).collection(collec).find({});
-  const results =  cursor.toArray();
-
-  if (results.length > 0) {
-    results.forEach((result, i) => {
-
-        console.log(result);
-        mong.results = results
-        mong.result = result;
-        // Here you could build your html or put the results in some other data structure you want to work with
-    });
-} else {
-    console.log(`No data found`);
-}
+mong.listed = (client, clust, collec) => {         
+        const cursor = client.db(clust).collection(collec).find({});
+        const results =  cursor.toArray();
+        if (results.length > 0) {
+          results.forEach((result, i) => {
+      
+              console.log(result);
+              mong.results = results
+              mong.result = result;
+              // Here you could build your html or put the results in some other data structure you want to work with
+          });
+      } else {
+          console.log(`No data found`);
+      }
+    
 }
 
 
