@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-const express = require('express')
-const app = express()
-const ttn = require("ttn")
-=======
 const ttn = require("ttn");
->>>>>>> 74abc4f8db41d65946afee567eded767e8846a63
 const dotenv = require("dotenv");
 require("dotenv").config();
 var events = require('events');
@@ -37,8 +31,4 @@ sioux.smoke_signal = (device, payload) => {
 }
 
 
-<<<<<<< HEAD
 module.exports = sioux
-=======
-module.exports = sioux
->>>>>>> 74abc4f8db41d65946afee567eded767e8846a63
