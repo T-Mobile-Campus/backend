@@ -15,8 +15,6 @@ router.get("/sioux/:device/:smoke", cors(),  (req, res, next) => {
 });
 
 router.get("/sioux/lum", (req, res, next) => {
-  res.status(200).json({ lum: sioux.lum })
-})
   res.status(200).json( mong.results )
 })
 
