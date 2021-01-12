@@ -1,19 +1,23 @@
 const {MongoClient} = require('mongodb');
 const uri = "mongodb+srv://theocop:8kp457co99@cluster0.oyhg9.mongodb.net/test?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true } );
+const sioux = require('./ttn.js')
+
+let mong = {};
 
 async function main (){
     try {
         // Connect to the MongoDB cluster
         await client.connect();
-        await createListing(client,
-            {
-                name: "Lovely Loft",
-                summary: "A charming loft in Paris",
-                bedrooms: 1,
-                bathrooms: 1
-            }
-        );
+        sioux.eventEmitter.on("lum", data => {
+             createListing(client,
+                {
+                    lum: data,
+                    
+                }
+            );
+        })
+        
 
  
         // Make the appropriate DB calls
@@ -22,9 +26,10 @@ async function main (){
     } catch (e) {
         console.error(e);
     } finally {
-        await client.close();
+        //await client.close();
     }
 }
+
 
 
 
@@ -38,11 +43,15 @@ async function listDatabases(client){
 
 
 async function createListing(client, newListing){
-    const result = await client.db("sample_airbnb").collection("listingsAndReviews").insertOne(newListing);
+    const result = await client.db("test").collection("Data").insertOne(newListing);
+                
     console.log(`New listing created with the following id: ${result.insertedId}`);
 
 
 }
+
+module.exports = mong
+
 
 
 
