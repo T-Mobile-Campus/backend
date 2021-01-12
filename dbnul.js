@@ -20,7 +20,7 @@ mong.fetch = async function(clust = null, collec = null) {
         await client.connect();
 
         await findLights(client);
-        if(clust && collec) await mong.listed(client, clust, collec)
+        if(clust && collec)  mong.listed(client, clust, collec)
 
     } finally {
         // Close the connection to the MongoDB cluster

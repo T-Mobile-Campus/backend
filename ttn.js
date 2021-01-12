@@ -16,7 +16,11 @@ ttn.data(appID, accessKey)
   .then(function (client) {
     client.on("uplink", function (devID, payload) {
       sioux.lum = payload.payload_fields.lum
-      sioux.eventEmitter.emit("lum", sioux.lum)
+      sioux.temp = payload.payload_fields.temp
+      sioux.eventEmitter.emit("update", {
+        lum: sioux.lum,
+        temp: sioux.temp
+      })
       console.log(payload.payload_fields)
     })
   })
