@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 5000
 const router = require('./routes.js')
+const sioux = require('./ttn.js')
 // const cors = require('cors')
 
 // app.use(cors)
@@ -31,12 +32,12 @@ const io = require('socket.io')(server, {
 
 
 io.on("connection",  function (socket) {
-  console.log("connected:" + socket.id);
-  socket.emit("lum", 'hello')
+  console.log(`${socket.id} connected. sent lum : ${sioux.lum}`);
+  socket.emit("lum", sioux.lum)
   sioux.eventEmitter.on("lum", data => {
-    socket.emit("lum", data)
+    sioux.lum = data
+    socket.emit("lum", sioux.lum)
   })
 });
 
-const sioux = require('./ttn.js')
 
