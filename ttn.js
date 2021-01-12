@@ -1,13 +1,17 @@
+<<<<<<< HEAD
 const express = require('express')
 const app = express()
 const ttn = require("ttn")
+=======
+const ttn = require("ttn");
+>>>>>>> 74abc4f8db41d65946afee567eded767e8846a63
 const dotenv = require("dotenv");
 require("dotenv").config();
 var events = require('events');
 var eventEmitter = new events.EventEmitter();
 
-const appID = process.env.APP_ID
-const accessKey = process.env.ACCESS_KEY
+const appID = "le-super-lorawan-id734";
+const accessKey = "ttn-account-v2.yUBNrE1zHg79McFMTqOC7wBjxswJlZ4zWDjabqFa61g";
 const client = new ttn.DataClient(appID, accessKey, 'eu.thethings.network:1883');
 
 let sioux = {}
@@ -33,4 +37,8 @@ sioux.smoke_signal = (device, payload) => {
 }
 
 
+<<<<<<< HEAD
 module.exports = sioux
+=======
+module.exports = sioux
+>>>>>>> 74abc4f8db41d65946afee567eded767e8846a63
