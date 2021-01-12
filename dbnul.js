@@ -1,7 +1,7 @@
 const { MongoClient } = require('mongodb');
-const mong = require('./dbconnect');
 
 
+let mong = {};
 mong.fetch = async function(clust = null, collec = null) {
     /**
      * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
