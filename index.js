@@ -30,13 +30,22 @@ const io = require('socket.io')(server, {
   }
 });
 
+// SOCKETS 
+
 
 io.on("connection",  function (socket) {
   console.log(`${socket.id} connected. sent lum : ${sioux.lum}`);
-  socket.emit("lum", sioux.lum)
-  sioux.eventEmitter.on("lum", data => {
-    sioux.lum = data
-    socket.emit("lum", sioux.lum)
+  socket.emit("update", {
+      lum: sioux.lum,
+      temp: sioux.temp
+    })
+  sioux.eventEmitter.on("update", data => {
+    sioux.lum = data.lum
+    sioux.temp = data.temp
+    socket.emit("update", {
+      lum: sioux.lum,
+      temp: sioux.temp
+    })
   })
 });
 
