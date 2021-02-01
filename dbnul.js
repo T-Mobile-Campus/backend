@@ -3,15 +3,7 @@ const { MongoClient } = require('mongodb');
 
 let mong = {};
 mong.fetch = async function(clust = null, collec = null) {
-    /**
-     * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
-     * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
-     */
-    
-    /**
-     * The Mongo Client you will use to interact with your database
-     * See https://mongodb.github.io/node-mongodb-native/3.3/api/MongoClient.html for more details
-     */
+
     const uri = "mongodb+srv://theocop:8kp457co99@cluster0.oyhg9.mongodb.net/test?retryWrites=true&w=majority";
     const client = new MongoClient(uri, { useUnifiedTopology: true });
 
@@ -22,7 +14,11 @@ mong.fetch = async function(clust = null, collec = null) {
         await findLights(client);
         if(clust && collec)  mong.listed(client, clust, collec)
 
-    } finally {
+    } 
+    catch (err) {
+        console.error(err);
+    }
+    finally {
         // Close the connection to the MongoDB cluster
         await client.close();
     }
