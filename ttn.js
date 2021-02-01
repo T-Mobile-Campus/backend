@@ -16,10 +16,10 @@ ttn.data(appID, accessKey)
   .then(function (client) {
     client.on("uplink", function (devID, payload) {
       sioux.lum = payload.payload_fields.lum
-      sioux.temp = payload.payload_fields.temp
+      sioux.vibr = payload.payload_fields.vibr
       sioux.eventEmitter.emit("update", {
         lum: sioux.lum,
-        temp: sioux.temp
+        vibr: sioux.vibr
       })
       console.log(payload.payload_fields)
     })

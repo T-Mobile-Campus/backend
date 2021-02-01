@@ -1,4 +1,5 @@
 const express = require('express')
+const mong = require('./dbnul.js')
 const app = express()
 const port = process.env.PORT || 5000
 const router = require('./routes.js')
@@ -41,12 +42,23 @@ io.on("connection",  function (socket) {
     })
   sioux.eventEmitter.on("update", data => {
     sioux.lum = data.lum
-    sioux.temp = data.temp
+    sioux.vibr = data.vibr
+    insert_seconds(data.vibr)
     socket.emit("update", {
       lum: sioux.lum,
-      temp: sioux.temp
+      vibr: sioux.vibr
     })
   })
 });
+
+
+// INSERT
+
+const insert_seconds = data =>  {
+  data.forEach(seconde => {
+    console.log(seconde)
+    // mong.insert("secondes", "sioux", seconde)
+  });
+}
 
 
