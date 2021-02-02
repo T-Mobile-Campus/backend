@@ -21,6 +21,11 @@ router.get("/sioux/lum",cors(), (req, res, next) => {
   res.status(200).json( mong.results )
 })
 
+router.get("/sioux/vibr",cors(), (req, res, next) => {
+  mong.fetch("Sioux", "last_12_hours")
+  res.status(200).json( mong.results )
+})
+
 router.get("/:clust/:collec", cors(), (req, res, next)=>{
  mong.fetch(req.params.clust, req.params.collec)
   res.status(200).json(mong.results)
