@@ -1,6 +1,9 @@
 {
   "name": "solar",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.18.1"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
