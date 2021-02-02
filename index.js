@@ -59,10 +59,9 @@ io.on("connection",  function (socket) {
 
 const insert_seconds = data => {
 
-  data.forEach((seconde,i) => {
     entry = {
-      vibr: seconde,
-      date: new Date(Date.now() - 6000 - (i * 1000) ) 
+      vibr: Math.max(...data),
+      date: new Date(Date.now()) 
     }
     try {
       mong.addDoc("Sioux", "last_12_hours", entry)
@@ -70,8 +69,6 @@ const insert_seconds = data => {
     catch (e) {
       console.error(e)
     }
-    // mong.addDoc("Sioux", "last_12_hours", entry)
-  });
 }
 
 
