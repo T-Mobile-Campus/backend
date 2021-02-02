@@ -4,6 +4,9 @@ const app = express()
 const port = process.env.PORT || 5000
 const router = require('./routes.js')
 const sioux = require('./ttn.js')
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: true }));
 // const cors = require('cors')
 
 // app.use(cors)
@@ -55,9 +58,18 @@ io.on("connection",  function (socket) {
 // INSERT
 
 const insert_seconds = data =>  {
-  data.forEach(seconde => {
-    console.log(seconde)
-    // mong.insert("secondes", "sioux", seconde)
+  data.forEach((seconde,i) => {
+    entry = {
+      vibr: seconde,
+      date: new Date(Date.now() - 6000 - (i * 1000) ) 
+    }
+    try {
+     mong.addDoc("Sioux", "last_12_hours", entry)
+    }
+    catch (e) {
+      console.error(e)
+    }
+    // mong.addDoc("Sioux", "last_12_hours", entry)
   });
 }
 
