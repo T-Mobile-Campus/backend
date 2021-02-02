@@ -1,7 +1,9 @@
+const dotenv = require("dotenv");
+require("dotenv").config();
 const { MongoClient } = require('mongodb');
 let mong = {};
 mong.fetch = async function(clust = null, collec = null) {
-    const uri = "mongodb+srv://theocop:8kp457co99@cluster0.oyhg9.mongodb.net/Sioux?retryWrites=true&w=majority";
+    const uri = process.env.MONGO_URI;
      mong.client = new MongoClient(uri, { useUnifiedTopology: true });
     try {
         // Connect to the MongoDB cluster
