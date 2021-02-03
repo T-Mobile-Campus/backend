@@ -3,7 +3,6 @@ require("dotenv").config();
 const { MongoClient } = require('mongodb');
 let mong = {};
 const uri = process.env.MONGO_URI;
-// mong.client = new MongoClient(uri, { useUnifiedTopology: true });
 mong.fetch = async function(clust, collec) {
     const client = new MongoClient(uri, { useUnifiedTopology: true });
     try {
