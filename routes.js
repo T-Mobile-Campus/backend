@@ -17,9 +17,9 @@ router.get("/sioux/:device/:smoke", cors(),  (req, res, next) => {
   res.status(200).json({smoke_signal:true})
 });
 
-router.get("/sms/:tonum/:monum/:mess", cors(), (req, res, next) =>{
-  sioux.message(req.params.tonum, req.params.monum, req.params.mess)
-  res.status(200).json(req.params.mess)
+router.get("/sms/:tonum/:mess", cors(), (req, res, next) =>{
+  sioux.message(req.params.tonum, req.params.mess)
+  res.status(200).json(req.params.tonum)
 })
 
 router.get("/sioux/lum",cors(), (req, res, next) => {
