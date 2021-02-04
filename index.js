@@ -63,7 +63,6 @@ sioux.eventEmitter.on("update", data => {
   sioux.message("+33755446464", 'CA VIBRE TROP ' + Math.max(...sioux.vibr))
   }
 })
-})
 
 const insert_seconds = async data => {
     entry = {
