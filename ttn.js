@@ -1,16 +1,21 @@
 const ttn = require("ttn");
 const dotenv = require("dotenv");
 require("dotenv").config();
+var twilio = require('twilio');
+
 var events = require('events');
 var eventEmitter = new events.EventEmitter();
 
-<<<<<<< Updated upstream
-const appID = "le-super-lorawan-id734";
-const accessKey = "ttn-account-v2.yUBNrE1zHg79McFMTqOC7wBjxswJlZ4zWDjabqFa61g";
-=======
+
 const appID = process.env.TTN_APP_ID;
 const accessKey = process.env.TTN_ACCESS_KEY;
->>>>>>> Stashed changes
+
+const appID = process.env.TTN_APP_ID;
+const accessKey = process.env.TTN_ACCESS_KEY;
+const twilio_sid = process.env.TWILIO_SID
+const twilio_auth = process.env.TWILIO_AUTH
+const twilio_num = process.env.TWILIO_NUM
+var clientz = new twilio(twilio_sid, twilio_auth);
 const client = new ttn.DataClient(appID, accessKey, 'eu.thethings.network:1883');
 const sms = require("./sms.js");
 
@@ -39,12 +44,9 @@ sioux.smoke_signal = (device, payload) => {
   client.send(device, payload,1)
   console.log('smoke signal sent')
 }
-<<<<<<< Updated upstream
 
-
-=======
 sioux.message = (tonum,mess)=>{
   sms.message(tonum, mess);
 }
->>>>>>> Stashed changes
+
 module.exports = sioux

@@ -6,6 +6,7 @@ const path = require("path");
 const fs = require("fs");
 require("dotenv").config();
 const sioux = require('./ttn.js')
+const mess = require('./sms.js')
 const cors = require('cors')
 const mong = require('./dbnul.js');
 const { data } = require("ttn");
@@ -16,8 +17,18 @@ router.get("/sioux/:device/:smoke", cors(),  (req, res, next) => {
   res.status(200).json({smoke_signal:true})
 });
 
+router.get("/sms/:tonum/:mess", cors(), (req, res, next) =>{
+  sioux.message(req.params.tonum, req.params.mess)
+  res.status(200).json(req.params.tonum)
+})
+
 router.get("/sioux/lum",cors(), (req, res, next) => {
   mong.fetch()
+  res.status(200).json( mong.results )
+})
+
+router.get("/sioux/vibr",cors(), (req, res, next) => {
+  mong.fetch("Sioux", "last_12_hours")
   res.status(200).json( mong.results )
 })
 
