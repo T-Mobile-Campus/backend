@@ -31,9 +31,10 @@ async function find(clust, collec) {
 }
 mong.addDoc = async (clust, collec, doc) => {
     const client = new MongoClient(uri, { useUnifiedTopology: true });
+    let res = false
     try {
         await client.connect();
-        await client.db(clust).collection(collec).insertOne({ doc })
+        res = await (await client.db(clust).collection(collec).insertOne({ doc })).result.ok
     }
     catch (e) {
         console.error(e)
@@ -41,5 +42,6 @@ mong.addDoc = async (clust, collec, doc) => {
     finally {
         await client.close();
     }
+    return res 
 }
 module.exports = mong

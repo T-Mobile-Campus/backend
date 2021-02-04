@@ -27,6 +27,7 @@ const server = app.listen(port, () => {
   console.log(`app listening at http://localhost:${port}`)
 })
 
+
 const io = require('socket.io')(server, {
   cors: {
     // origin: "http://localhost:8080",
@@ -46,7 +47,9 @@ io.on("connection",  function (socket) {
   sioux.eventEmitter.on("update", data => {
     sioux.lum = data.lum
     sioux.vibr = data.vibr
-    insert_seconds(data.vibr)
+    if (process.env.MODE == 'prod') {
+      insert_seconds(data.vibr)
+    }
     socket.emit("update", {
       lum: sioux.lum,
       vibr: sioux.vibr
@@ -57,14 +60,15 @@ io.on("connection",  function (socket) {
 
 // INSERT
 
-const insert_seconds = data => {
+const insert_seconds = async data => {
 
     entry = {
       vibr: Math.max(...data),
       date: new Date(Date.now()) 
     }
     try {
-      mong.addDoc("Sioux", "last_12_hours", entry)
+      res = await mong.addDoc("Sioux", "last_12_hours", entry)
+      console.log(res)
     }
     catch (e) {
       console.error(e)
