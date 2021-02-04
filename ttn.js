@@ -39,7 +39,6 @@ sioux.smoke_signal = (device, payload) => {
 
 sioux.message = (tonum, monum, mess) => {
   clientz.messages.create({
-    
     to: tonum,
     from: monum,
     body: mess

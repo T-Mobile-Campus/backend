@@ -5,7 +5,7 @@ var arr = ["+33755446464","+33629052337", "+33695382555"];
 sioux.eventEmitter.on("update", data => {
   if (Math.max(...sioux.vibr)> 7000){
     arr.forEach(function(value){console.log(value);
-client.messages.create({
+    client.messages.create({
     
     to: value ,
     from: '+15086717310',
