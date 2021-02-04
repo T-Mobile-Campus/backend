@@ -6,16 +6,16 @@ const twilio_sid = process.env.TWILIO_SID
 const twilio_auth = process.env.TWILIO_AUTH
 const twilio_num = process.env.TWILIO_NUM
 var client = new twilio(twilio_sid, twilio_auth);
-sioux.eventEmitter.on("update", data => {
-  if (Math.max(...sioux.vibr)> 7000){
-    arr.forEach(function(value){console.log(value);
-    client.messages.create({
-    
-    to: value ,
-    from: twilio_num,
-    body: 'CA VIBRE TROP ' + Math.max(...sioux.vibr)
-  });
-})
-}
-})
 
+var sms = {};
+sms.client = client;
+sms.twilio_num = twilio_num;
+sms.message = (tonum, mess) => {
+  let arf = sms.client.messages.create({    
+    to: tonum,
+    from: sms.twilio_num,
+    body: mess
+  }).catch(res => console.log(res))
+  console.log(arf)
+}
+module.exports = sms
