@@ -55,7 +55,7 @@ io.on("connection",  function (socket) {
 });
 
 sioux.eventEmitter.on("update", data => {
-  if (process.env.MODE == 'dev') {
+  if (process.env.MODE == 'prod') {
     insert_seconds(data.vibr)
     if (Math.max(...sioux.vibr)> sioux.threshold){
       insert_high_values(data.vibr)
