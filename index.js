@@ -41,21 +41,24 @@ const io = require('socket.io')(server, {
 io.on("connection",  function (socket) {
   console.log(`${socket.id} connected. sent lum : ${sioux.lum}`);
   socket.emit("update", {
-      lum: sioux.lum,
-      temp: sioux.temp
-    })
+    lum: sioux.lum,
+    temp: sioux.temp
+  })
   sioux.eventEmitter.on("update", data => {
     sioux.lum = data.lum
     sioux.vibr = data.vibr
-    if (process.env.MODE == 'prod') {
-      insert_seconds(data.vibr)
-    }
     socket.emit("update", {
       lum: sioux.lum,
       vibr: sioux.vibr
     })
   })
 });
+
+sioux.eventEmitter.on("update", data => {
+      if (process.env.MODE == 'prod') {
+      insert_seconds(data.vibr)
+    }
+})
 
 
 // INSERT
