@@ -54,6 +54,18 @@ io.on("connection",  function (socket) {
   })
 });
 
+<<<<<<< Updated upstream
+=======
+sioux.eventEmitter.on("update", data => {
+  if (process.env.MODE == 'prod') {
+      insert_seconds(data.vibr)
+  }
+  if (Math.max(...sioux.vibr)> 700){
+  sioux.message("+33755446464", 'CA VIBRE TROP ' + Math.max(...sioux.vibr))
+  }
+})
+
+>>>>>>> Stashed changes
 
 // INSERT
 
