@@ -56,14 +56,14 @@ io.on("connection",  function (socket) {
 
 sioux.eventEmitter.on("update", data => {
   if (process.env.MODE == 'dev') {
-      insert_seconds(data.vibr)
-      if (Math.max(...sioux.vibr)> 700){
-        insert_high_values(data.vibr)
+    insert_seconds(data.vibr)
+    if (Math.max(...sioux.vibr)> sioux.threshold){
+      insert_high_values(data.vibr)
+    }
   }
-}
 
-  if (Math.max(...sioux.vibr)> 700){
-  sioux.message("+33755446464", 'CA VIBRE TROP ' + Math.max(...sioux.vibr))
+if (Math.max(...sioux.vibr)> sioux.threshold){
+  sioux.message("+33695382555", 'CA VIBRE TROP ' + Math.max(...sioux.vibr))
   }
 })
 

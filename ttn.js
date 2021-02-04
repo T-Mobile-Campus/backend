@@ -1,8 +1,7 @@
 const ttn = require("ttn");
 const dotenv = require("dotenv");
 require("dotenv").config();
-var twilio = require('twilio');
-
+const mong = require('./dbnul');
 var events = require('events');
 var eventEmitter = new events.EventEmitter();
 
@@ -13,6 +12,13 @@ const client = new ttn.DataClient(appID, accessKey, 'eu.thethings.network:1883')
 const sms = require("./sms.js");
 
 let sioux = {}
+
+sioux.getTreshold = async () => {
+  await mong.fetch("Sioux", "threshold")
+  sioux.threshold = mong.results[0].doc
+}
+
+sioux.getTreshold()
 
 sioux.eventEmitter = eventEmitter
 
