@@ -12,10 +12,6 @@ const accessKey = process.env.TTN_ACCESS_KEY;
 
 const appID = process.env.TTN_APP_ID;
 const accessKey = process.env.TTN_ACCESS_KEY;
-const twilio_sid = process.env.TWILIO_SID
-const twilio_auth = process.env.TWILIO_AUTH
-const twilio_num = process.env.TWILIO_NUM
-var clientz = new twilio(twilio_sid, twilio_auth);
 const client = new ttn.DataClient(appID, accessKey, 'eu.thethings.network:1883');
 const sms = require("./sms.js");
 
@@ -48,5 +44,6 @@ sioux.smoke_signal = (device, payload) => {
 sioux.message = (tonum,mess)=>{
   sms.message(tonum, mess);
 }
+
 
 module.exports = sioux
