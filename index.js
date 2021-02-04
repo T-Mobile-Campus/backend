@@ -55,7 +55,7 @@ io.on("connection",  function (socket) {
 });
 
 sioux.eventEmitter.on("update", data => {
-  if (process.env.MODE == 'prod') {
+   if (process.env.MODE == 'prod') {
       insert_seconds(data.vibr)
   }
 })
