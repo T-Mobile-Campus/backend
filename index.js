@@ -95,7 +95,3 @@ const insert_high_values = async data => {
     console.error(e)
   }
 }
-
-
-
-
