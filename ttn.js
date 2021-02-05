@@ -57,7 +57,7 @@ sioux.auto_move = (routine) => {
     sioux.task.destroy()   
   }
   if (routine >= 1) {
-    sioux.task = cron.schedule(`* */${routine} * * * *`, function() {
+    sioux.task = cron.schedule(`*/${routine} * * * *`, function() {
     sioux.smoke_signal("oui","01")
   });
   }
