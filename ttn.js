@@ -19,9 +19,8 @@ sioux.getTreshold = async () => {
 }
 
 sioux.getRoutine = async () => {
-  await mong.fetch("Sioux", "auto_mode")
-  sioux.routine = mong.results[0].doc
-  sioux.auto_move(sioux.routine)
+  res = await mong.fetch("Sioux", "auto_mode")
+  sioux.auto_move(res.doc)
 }
 
 sioux.getTreshold()
