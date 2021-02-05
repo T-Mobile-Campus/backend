@@ -9,7 +9,6 @@ const sioux = require('./ttn.js')
 const mess = require('./sms.js')
 const cors = require('cors')
 const mong = require('./dbnul.js');
-const { data } = require("ttn");
 
 router.get("/sms/:tonum/:mess", cors(), (req, res, next) =>{
   sioux.message(req.params.tonum, req.params.mess)
@@ -17,8 +16,8 @@ router.get("/sms/:tonum/:mess", cors(), (req, res, next) =>{
 })
 
 router.get("/sioux/:collec", cors(), async (req, res, next)=>{
-  res = await mong.fetch("Sioux", req.params.collec)
-  res.status(200).json(res)
+  data = await mong.fetch("Sioux", req.params.collec)
+  res.status(200).json(data)
 })
 
 router.get("/sioux/threshold/:value", cors(), async (req, res) =>{
