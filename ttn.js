@@ -52,6 +52,7 @@ sioux.smoke_signal = (device, payload) => {
 
 sioux.auto_move = (routine) => {
   console.log(sioux.task)
+  console.log(routine)
   if (sioux.task) {
     sioux.task.stop()
     sioux.task.destroy()   
