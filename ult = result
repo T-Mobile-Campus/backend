@@ -1,0 +1,522 @@
+[33mcommit e116aff2f59a847f3d9d6f6908cef7dc153c6bba[m[33m ([m[1;36mHEAD -> [m[1;32mcron[m[33m, [m[1;31morigin/cron[m[33m)[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Fri Feb 5 14:40:28 2021 +0100
+
+    ca marche presque
+
+[33mcommit 48b94454c48ef3d15e9fdd3969497c68f2817fef[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Fri Feb 5 13:47:21 2021 +0100
+
+    pack
+
+[33mcommit 9255e88b842397bd409fe305b0b0ea94b86dfa6e[m
+Merge: a01052c 2bf0e16
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Fri Feb 5 13:43:00 2021 +0100
+
+    Merge branch 'main' of github.com:T-Mobile-Campus/backend into main
+
+[33mcommit a01052c2297b660cb9afa22f2fed7ee9e80ee6ff[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Fri Feb 5 13:42:48 2021 +0100
+
+    stash
+
+[33mcommit 2bf0e168965922075e9c689904dddea173a211de[m[33m ([m[1;32mmain[m[33m)[m
+Merge: c28df04 435a7d1
+Author: theocolombel <theocolombel@gmail.com>
+Date:   Fri Feb 5 13:40:33 2021 +0100
+
+    fix package
+
+[33mcommit c28df04e530f33222ecc9ea14a616153aec0cb4c[m
+Author: theocolombel <theocolombel@gmail.com>
+Date:   Fri Feb 5 13:35:46 2021 +0100
+
+    ajout mode auto
+
+[33mcommit 435a7d14d3a00d7c6bdaa3b58a24acec261adac6[m
+Author: Abdelkader Atamaa <abdelkader@floki.io>
+Date:   Fri Feb 5 09:28:57 2021 +0100
+
+    packLock
+
+[33mcommit ef874354e0ac802c933ab00346f4a77c67dab2ed[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Thu Feb 4 15:45:33 2021 +0100
+
+    set verif prod
+
+[33mcommit b5e75cf8fd9f6bf0cd8531ea27392cc66e887abe[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Thu Feb 4 15:09:46 2021 +0100
+
+    samair
+
+[33mcommit 642cb1b22ef6469aafba941b0d4f3854cee52bb0[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Thu Feb 4 14:50:32 2021 +0100
+
+    old pack
+
+[33mcommit 2a79801e87ba64e9dec198d1ae89fe7d93dfcd34[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Thu Feb 4 14:35:43 2021 +0100
+
+    pack
+
+[33mcommit 27fc64f5ca9c80a48b0bcd00937c3413bb380b75[m
+Merge: f39975a fd4afc3
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Thu Feb 4 14:28:34 2021 +0100
+
+    Merge branch 'main' of github.com:T-Mobile-Campus/backend into main
+
+[33mcommit f39975a39fe7808f4c7b9507c6bec2446659c911[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Thu Feb 4 14:28:21 2021 +0100
+
+    threshold
+
+[33mcommit fd4afc3c99253de527f7b8b3cc9cf30afacc3bab[m
+Author: Abdelkader Atamaa <abdelkader@floki.io>
+Date:   Thu Feb 4 13:38:59 2021 +0100
+
+    packlo
+
+[33mcommit 9fa5bc77aa29414b1e52ed5d2a76ea2b44ac6c42[m
+Merge: cd5a5ec aa3b9e7
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Thu Feb 4 13:38:10 2021 +0100
+
+    conflict
+
+[33mcommit cd5a5ec874044f6d44b92f8d57b7b0071947b9b0[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Thu Feb 4 13:37:13 2021 +0100
+
+    rmv
+
+[33mcommit 20dd067100ccf7c352d3a2c588695f3a3ff524c5[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Thu Feb 4 13:36:56 2021 +0100
+
+    rmv
+
+[33mcommit aa3b9e73f2ec9aee49dde84fc722a985bdd67dba[m
+Author: theocolombel <theocolombel@gmail.com>
+Date:   Thu Feb 4 13:36:52 2021 +0100
+
+    high values
+
+[33mcommit 85f32b3eef6251f87a96f4fcf37aa8c41fcb5fc3[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Thu Feb 4 13:32:21 2021 +0100
+
+    conflict
+
+[33mcommit 325b84b46a27bba1398c78e61573f2d16b028f7f[m
+Merge: ac16ab7 ae6104d
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Thu Feb 4 13:30:57 2021 +0100
+
+    Merge branch 'main' of github.com:T-Mobile-Campus/backend into main
+
+[33mcommit ac16ab7376af2222c13f63dae1e5623d19dbc5a8[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Thu Feb 4 13:30:52 2021 +0100
+
+    stash
+
+[33mcommit ae6104dd600e6669a35a191905acecab2bb7202e[m
+Merge: fa02bbb af0fbf5
+Author: Abdelkader <58740908+AbdelkaderA@users.noreply.github.com>
+Date:   Thu Feb 4 13:30:28 2021 +0100
+
+    Merge pull request #6 from T-Mobile-Campus/insertions
+    
+    siouxMessage
+
+[33mcommit af0fbf52a46ada47045eb4a37e5fba3efe4ccc0e[m[33m ([m[1;31morigin/insertions[m[33m)[m
+Merge: 299442f fa02bbb
+Author: Abdelkader <58740908+AbdelkaderA@users.noreply.github.com>
+Date:   Thu Feb 4 13:30:16 2021 +0100
+
+    Merge branch 'main' into insertions
+
+[33mcommit 299442f400d715bfa94a0a22dffc64009d905c6d[m
+Author: Abdelkader Atamaa <abdelkader@floki.io>
+Date:   Thu Feb 4 13:14:33 2021 +0100
+
+    siouxMessage
+
+[33mcommit fa02bbb53d7ac972e9a2f3ee101e489965d324f0[m
+Merge: aaabc99 35aff6f
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Thu Feb 4 11:43:38 2021 +0100
+
+    resolve
+
+[33mcommit aaabc99af5a1732b0766534db47981e58384d25d[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Thu Feb 4 11:43:03 2021 +0100
+
+    stash
+
+[33mcommit 35aff6f8f3a9befa76687c0dfadc16e5a7e41fa2[m
+Author: theocolombel <theocolombel@gmail.com>
+Date:   Thu Feb 4 11:31:34 2021 +0100
+
+    secret const
+
+[33mcommit d43a5bce9af79da5c9c94348fb887b1659561392[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Thu Feb 4 11:23:45 2021 +0100
+
+    insert quickfix
+
+[33mcommit 9a9dae23b5ddb490cfb4f566ccadb7139e4c0431[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Thu Feb 4 09:58:02 2021 +0100
+
+    set threshhold 7000
+
+[33mcommit ffd6de215dd60fd7c95e7aca589b871ed6499352[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Thu Feb 4 09:53:14 2021 +0100
+
+    insert only from prod
+
+[33mcommit 440c68cb4eeeb24bc5a06ebc192cd54e9a94be50[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Wed Feb 3 17:00:52 2021 +0100
+
+    added twilio to package.json
+
+[33mcommit cca10b610d3807bbad45aefa7f8c96eb004fecb5[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Wed Feb 3 16:44:07 2021 +0100
+
+    merge
+
+[33mcommit bd93ae4191ba823a24ec148b6fb69183a4daee2c[m
+Author: theocolombel <theocolombel@gmail.com>
+Date:   Wed Feb 3 16:43:22 2021 +0100
+
+    mise en place alerte sms
+
+[33mcommit a24d3ddc8d98203f085ccd458b929928150913ee[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Wed Feb 3 16:05:04 2021 +0100
+
+    db fix
+
+[33mcommit dff673e5bbbb95e6754be298d5abd7cf8bac2655[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Wed Feb 3 15:47:05 2021 +0100
+
+    db refact
+
+[33mcommit 31fa1562ea45052c94161e8f7e711ce2602819d7[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Feb 2 15:31:00 2021 +0100
+
+    set engine node version to 12.18.1
+
+[33mcommit 9c21ed2b94ddd33c1bb6d5d804dabe32fa86ac5d[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Feb 2 15:22:52 2021 +0100
+
+    env variables
+
+[33mcommit 87b611fb58ede4bdb7e7967b4f3be92da1118206[m
+Merge: 9adb7e7 0678f15
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Feb 2 14:52:51 2021 +0100
+
+    Merge branch 'insertions' into main
+
+[33mcommit 0678f15dc27a7028ae11c926f609e3cedc5a338d[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Feb 2 14:52:02 2021 +0100
+
+    stash
+
+[33mcommit 9adb7e7399e704382660f2a0634053ff43ab66bc[m
+Merge: 0a3a05c 49d785f
+Author: Ulys <49024284+UlysC@users.noreply.github.com>
+Date:   Tue Feb 2 14:51:24 2021 +0100
+
+    Merge pull request #5 from T-Mobile-Campus/insertions
+    
+    init
+
+[33mcommit 973c1f01d9c6598808b0b859bb48893e90a9586d[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Feb 2 13:52:28 2021 +0100
+
+    insert && endpoint last_12_hours
+
+[33mcommit 49d785f039e2cf76238e85190f2a6519aea5bc00[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Feb 2 12:47:56 2021 +0100
+
+    init
+
+[33mcommit 0a3a05c056073dec5f53b5ebf956549a0ca3c640[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Mon Feb 1 16:19:50 2021 +0100
+
+    prepare insert
+
+[33mcommit 66fa113ab0a33fc4820543349758f5972127cb78[m
+Merge: 1fbc92d d0f662c
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Mon Feb 1 13:56:58 2021 +0100
+
+    Merge branch 'main' of github.com:T-Mobile-Campus/backend into main
+
+[33mcommit 1fbc92d9b71085696a15650f23544dc86262c4a1[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Mon Feb 1 13:56:46 2021 +0100
+
+    catch
+
+[33mcommit d0f662c96e306ae3410075508e8793bbc2f31e11[m
+Merge: 5b9cda3 38223b7
+Author: Abdelkader <abdelkader.atamaa@gmail.com>
+Date:   Tue Jan 12 16:31:20 2021 +0100
+
+    Merge branch 'main' of https://github.com/T-Mobile-Campus/backend into main
+
+[33mcommit 238f57849f5c4292f69298898556e449ed2f66d2[m
+Merge: 7368f73 38223b7
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Jan 12 15:55:20 2021 +0100
+
+    Merge branch 'main' of github.com:T-Mobile-Campus/backend into main
+
+[33mcommit 7368f738e648601a462d6813bf67b94495e5a437[m
+Merge: d9301db aefad16
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Jan 12 15:55:11 2021 +0100
+
+    merge
+
+[33mcommit 38223b7b659d2a51b46f79afefe5d25f2177b052[m
+Merge: a491b08 aefad16
+Author: Ulys <49024284+UlysC@users.noreply.github.com>
+Date:   Tue Jan 12 15:54:27 2021 +0100
+
+    Merge pull request #4 from T-Mobile-Campus/bdd
+    
+    untracked
+
+[33mcommit aefad16faa674c7b65d40a8ec744c95b4134a394[m[33m ([m[1;31morigin/bdd[m[33m)[m
+Author: theocolombel <theocolombel@gmail.com>
+Date:   Tue Jan 12 15:53:25 2021 +0100
+
+    del dbconnect
+
+[33mcommit d9301dba850d8f2079d2c199ba4403ab6f9a280c[m
+Merge: 7cca0fc a491b08
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Jan 12 15:51:10 2021 +0100
+
+    Merge branch 'main' of github.com:T-Mobile-Campus/backend into main
+
+[33mcommit 7cca0fc4cb32d0811ac23ee24596a52506babacb[m
+Merge: dc3a931 2376605
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Jan 12 15:51:03 2021 +0100
+
+    conflit
+
+[33mcommit 7ea0a6ffd8e5fef962ad82fb545730d0ade4cc03[m
+Merge: 2376605 a491b08
+Author: Ulys <49024284+UlysC@users.noreply.github.com>
+Date:   Tue Jan 12 15:50:14 2021 +0100
+
+    Merge branch 'main' into bdd
+
+[33mcommit 237660599d0c8b7eecceb8548af5a6edf337b6b2[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Jan 12 15:49:08 2021 +0100
+
+    untracked
+
+[33mcommit a491b08e44b2e2898337aecf4266145e5d18f7ba[m
+Merge: dc3a931 206f336
+Author: Ulys <49024284+UlysC@users.noreply.github.com>
+Date:   Tue Jan 12 15:47:42 2021 +0100
+
+    Merge pull request #3 from T-Mobile-Campus/bdd
+    
+    Bdd
+
+[33mcommit 206f3366a0d84e423fc11f248e1826ff52c2af71[m
+Merge: 60e5804 45b75f2
+Author: theocolombel <theocolombel@gmail.com>
+Date:   Tue Jan 12 15:40:46 2021 +0100
+
+    Merge branch 'bdd' of https://github.com/T-Mobile-Campus/backend into bdd
+
+[33mcommit 60e58041ecd81e24fe119a372488b2c47a3fb51b[m
+Author: theocolombel <theocolombel@gmail.com>
+Date:   Tue Jan 12 15:40:34 2021 +0100
+
+    coup de balais pour mongo
+
+[33mcommit dc3a9317fb60af99354a62f56a2a2b1648b5291d[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Jan 12 15:14:53 2021 +0100
+
+    added start script
+
+[33mcommit 116a1c55fe578c17bbb5690e7bb94b83acdfac27[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Jan 12 15:10:13 2021 +0100
+
+    pre heroku
+
+[33mcommit 5b9cda34b6b05013d8fb3cdd2e21e63851dd0e81[m
+Author: Abdelkader <abdelkader.atamaa@gmail.com>
+Date:   Tue Jan 12 14:37:46 2021 +0100
+
+    Gitignore
+
+[33mcommit bc1cbd9cc0625348dcf9c613b08ca0a6e3b38442[m
+Merge: 1530b77 ab35a62
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Jan 12 14:04:32 2021 +0100
+
+    Merge branch 'main' of github.com:T-Mobile-Campus/backend into main
+
+[33mcommit 1530b77f66a3eba7c0ad849263c866a6474bea9c[m
+Merge: 3e3bf4b 45b75f2
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Jan 12 14:04:26 2021 +0100
+
+    Merge branch 'bdd' into main
+
+[33mcommit ab35a62f8e7fa37e9b9052a20e4f313366cec619[m
+Merge: 3e3bf4b 45b75f2
+Author: Ulys <49024284+UlysC@users.noreply.github.com>
+Date:   Tue Jan 12 14:04:08 2021 +0100
+
+    Merge pull request #2 from T-Mobile-Campus/bdd
+    
+    Bdd
+
+[33mcommit 45b75f2c8c70b2eb81fc1d9efa5fc731c4ab6e0a[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Jan 12 14:03:31 2021 +0100
+
+    bdd setup and lum endpoints
+
+[33mcommit 92f2322c6032073258dde60254634a7e1f38d2f9[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Jan 12 11:32:38 2021 +0100
+
+    cluster/collec endpoint
+
+[33mcommit 1af5120caaebc03c696254cdd744191bc1b69796[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Jan 12 11:16:26 2021 +0100
+
+    C
+
+[33mcommit d3f9adce0d4e9882f2f467e32ca8aa7108d7ec4a[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Jan 12 11:15:00 2021 +0100
+
+    C
+
+[33mcommit c77876dc0e816e7aa17d167467555cff5effa497[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Jan 12 11:06:53 2021 +0100
+
+    C
+
+[33mcommit e4546765e8600763a0d55024488281484dd739dd[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Jan 12 11:05:46 2021 +0100
+
+    C
+
+[33mcommit 1122851567d4372510a281ad1d628eba2f981bf6[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Jan 12 11:04:42 2021 +0100
+
+    C
+
+[33mcommit 605e4a60e844b3593d30e093dbb753fb823e389f[m
+Merge: 0957f74 74abc4f
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Jan 12 11:03:14 2021 +0100
+
+    C
+
+[33mcommit 0957f7490b4a643d1661760b2f3504182bc02eb5[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Tue Jan 12 11:02:25 2021 +0100
+
+    stash
+
+[33mcommit 74abc4f8db41d65946afee567eded767e8846a63[m
+Author: theocolombel <theocolombel@gmail.com>
+Date:   Tue Jan 12 10:46:13 2021 +0100
+
+    connectioon bdd
+
+[33mcommit 5b6ea879b4e98b17047de1761435d93b761be5bf[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Mon Jan 11 19:26:30 2021 +0100
+
+    websockets now with Vue
+
+[33mcommit ebd21e9ce9b9f9e50b4f6015190ed5cb509f20c1[m
+Author: theocolombel <theocolombel@gmail.com>
+Date:   Mon Jan 11 11:35:43 2021 +0100
+
+    oui
+
+[33mcommit 3e3bf4b6da8dd511a711ccc714a9078a63efb960[m
+Merge: da5ffa2 d69b8cd
+Author: Ulys <49024284+UlysC@users.noreply.github.com>
+Date:   Mon Jan 11 11:33:37 2021 +0100
+
+    Merge pull request #1 from T-Mobile-Campus/downlinks
+    
+    Downlinks
+
+[33mcommit d69b8cd699d32fd876ddd7fdc622c94fb4bf2665[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Mon Jan 11 11:33:04 2021 +0100
+
+    web sockets init
+
+[33mcommit c143e8e4797da0f9d8f0d0c086b5c5e87f8d18bf[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Mon Jan 11 09:37:13 2021 +0100
+
+    de l m
+
+[33mcommit da5ffa25715e7fe87a4d2afa9c043d9c84fc3224[m
+Author: UlysC <ulys.chambard@gmail.com>
+Date:   Fri Jan 8 14:17:35 2021 +0100
+
+    init
+
+[33mcommit 1ff1a02483f30bef6b1dd786f93dbb90c172a03f[m
+Author: theocolombel <theocolombel@gmail.com>
+Date:   Fri Jan 8 10:59:24 2021 +0100
+
+    premier commit
+
+[33mcommit 323865c31b6116011e3d8889669737df408f2d29[m
+Author: Ulys <49024284+UlysC@users.noreply.github.com>
+Date:   Fri Jan 8 10:35:09 2021 +0100
+
+    Initial commit
