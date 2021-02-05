@@ -39,13 +39,6 @@ router.get("/signal/:device/:smoke", cors(),  (req, res, next) => {
   res.status(200).json({smoke_signal:true})
 });
 
-router.get("/:device/:smoke", cors(),  (req, res, next) => {
-  sioux.auto_move(req.params.device, req.params.smoke)
-  res.status(200).json(req.params.smoke)
-});
-
-
-
 router.use("/images", express.static(path.join(__dirname, "images")));
 
 module.exports = router;
