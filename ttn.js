@@ -18,7 +18,14 @@ sioux.getTreshold = async () => {
   sioux.threshold = res.doc
 }
 
+sioux.getRoutine = async () => {
+  await mong.fetch("Sioux", "auto_mode")
+  sioux.routine = mong.results[0].doc
+  sioux.auto_move(sioux.routine)
+}
+
 sioux.getTreshold()
+sioux.getRoutine()
 
 sioux.eventEmitter = eventEmitter
 
@@ -44,17 +51,17 @@ sioux.smoke_signal = (device, payload) => {
   console.log('smoke signal sent')
 }
 
-sioux.auto_move = (device, payload) => {
-  mong.fetch("Sioux", "auto_mode")
-  console.log(mong.results)
-  if (mong.results[0].mode >= 1 ){
-   sioux.task = cron.schedule(' */10 * * * * *', function() {
-    client.send(device, payload,1)
-
+sioux.auto_move = (routine) => {
+  console.log(sioux.task)
+  if (sioux.task) {
+    sioux.task.stop()
+    sioux.task.destroy()   
+  }
+  if (routine >= 1) {
+    sioux.task = cron.schedule(`* */${routine} * * * *`, function() {
+    sioux.smoke_signal("oui","01")
   });
-}else{
- sioux.task.destroy()
-}
+  }
 }
 
 sioux.message = (tonum,mess)=>{
