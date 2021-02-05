@@ -6,7 +6,6 @@ var events = require('events');
 var eventEmitter = new events.EventEmitter();
 const cron = require('node-cron');
 
-
 const appID = process.env.TTN_APP_ID;
 const accessKey = process.env.TTN_ACCESS_KEY;
 const client = new ttn.DataClient(appID, accessKey, 'eu.thethings.network:1883');
