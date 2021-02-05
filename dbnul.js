@@ -9,17 +9,7 @@ mong.fetch = async function(clust, collec) {
         await client.connect();
         const cursor = await client.db(clust).collection(collec).find({});
         const results = await cursor.toArray();
-
-        if (results.length > 0) {
-            results.forEach((result, i) => {
-                mong.results = results
-                mong.result = result;
-                
-                
-            });
-        } else {
-            console.log(`No data found`);
-            }
+        return results.length > 1 ? results : results.length > 0 ? results[0] : {"error" : "No Data Found"}
     } 
     catch (err) {
         console.error(err);
@@ -28,9 +18,7 @@ mong.fetch = async function(clust, collec) {
         await client.close();
     }
 }
-async function find(clust, collec) {
 
-}
 mong.addDoc = async (clust, collec, doc) => {
     const client = new MongoClient(uri, { useUnifiedTopology: true });
     let res = false

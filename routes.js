@@ -16,14 +16,9 @@ router.get("/sms/:tonum/:mess", cors(), (req, res, next) =>{
   res.status(200).json(req.params.tonum)
 })
 
-router.get("/sioux/lum",cors(), (req, res, next) => {
-  mong.fetch()
-  res.status(200).json( mong.results )
-})
-
 router.get("/sioux/:collec", cors(), async (req, res, next)=>{
-  await mong.fetch("Sioux", req.params.collec)
-  res.status(200).json(mong.results)
+  res = await mong.fetch("Sioux", req.params.collec)
+  res.status(200).json(res)
 })
 
 router.get("/sioux/threshold/:value", cors(), async (req, res) =>{
