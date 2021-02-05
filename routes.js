@@ -29,8 +29,8 @@ router.get("/sioux/:collec", cors(), async (req, res, next)=>{
 router.get("/sioux/threshold/:value", cors(), async (req, res) =>{
   value = req.params.value
   result = await mong.addDoc("Sioux", "threshold", value)
-  sioux.getTreshold()
-  res.status(201).json(result)
+  await sioux.getTreshold()
+  res.status(201).json(sioux.threshold)
 })
 
 router.get("/sioux/:device/:smoke", cors(),  (req, res, next) => {
