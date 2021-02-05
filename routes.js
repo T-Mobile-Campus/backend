@@ -33,7 +33,14 @@ router.get("/sioux/threshold/:value", cors(), async (req, res) =>{
   res.status(201).json(sioux.threshold)
 })
 
-router.get("/sioux/:device/:smoke", cors(),  (req, res, next) => {
+router.get("/sioux/routine/:value", cors(), async (req, res) =>{
+  value = req.params.value
+  result = await mong.addDoc("Sioux", "auto_mode", value)
+  await sioux.getRoutine()
+  res.status(201).json(sioux.routine)
+})
+
+router.get("/signal/:device/:smoke", cors(),  (req, res, next) => {
   sioux.smoke_signal(req.params.device, req.params.smoke)
   res.status(200).json({smoke_signal:true})
 });

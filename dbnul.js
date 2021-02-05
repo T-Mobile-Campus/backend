@@ -13,9 +13,7 @@ mong.fetch = async function(clust, collec) {
         if (results.length > 0) {
             results.forEach((result, i) => {
                 mong.results = results
-                mong.result = result;
-                
-                
+                mong.result = result;                
             });
         } else {
             console.log(`No data found`);
