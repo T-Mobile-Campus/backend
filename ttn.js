@@ -4,6 +4,7 @@ require("dotenv").config();
 const mong = require('./dbnul');
 var events = require('events');
 var eventEmitter = new events.EventEmitter();
+const cron = require('node-cron');
 
 const appID = process.env.TTN_APP_ID;
 const accessKey = process.env.TTN_ACCESS_KEY;
@@ -41,6 +42,19 @@ ttn.data(appID, accessKey)
 sioux.smoke_signal = (device, payload) => {
   client.send(device, payload,1)
   console.log('smoke signal sent')
+}
+
+sioux.auto_move = (device, payload) => {
+  mong.fetch("Sioux", "auto_mode")
+  console.log(mong.results)
+  if (mong.results[0].mode >= 1 ){
+   sioux.task = cron.schedule(' */10 * * * * *', function() {
+    client.send(device, payload,1)
+
+  });
+}else{
+ sioux.task.destroy()
+}
 }
 
 sioux.message = (tonum,mess)=>{
