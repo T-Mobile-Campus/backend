@@ -14,8 +14,8 @@ const sms = require("./sms.js");
 let sioux = {}
 
 sioux.getTreshold = async () => {
-  await mong.fetch("Sioux", "threshold")
-  sioux.threshold = mong.results[0].doc
+  res = await mong.fetch("Sioux", "threshold")
+  sioux.threshold = res.doc
 }
 
 sioux.getRoutine = async () => {
