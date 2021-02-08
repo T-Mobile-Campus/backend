@@ -50,7 +50,10 @@ io.on("connection",  function (socket) {
     let int = setInterval(() => {
       socket.emit("update", {
         lum: sioux.lum,
-        vibr: [sioux.vibr[i]]
+        vibr: {
+          val :sioux.vibr[i],
+          date: new Date(Date.now())
+        }
       })     
       i++
       if (i == 6) clearInterval(int)
