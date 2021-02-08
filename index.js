@@ -42,15 +42,19 @@ io.on("connection",  function (socket) {
   console.log(`${socket.id} connected. sent lum : ${sioux.lum}`);
   socket.emit("update", {
     lum: sioux.lum,
-    temp: sioux.temp
   })
-  sioux.eventEmitter.on("update", data => {
+  sioux.eventEmitter.on("update", async data => {
     sioux.lum = data.lum
     sioux.vibr = data.vibr
-    socket.emit("update", {
-      lum: sioux.lum,
-      vibr: sioux.vibr
-    })
+    let i = 0
+    let int = setInterval(() => {
+      socket.emit("update", {
+        lum: sioux.lum,
+        vibr: [sioux.vibr[i]]
+      })     
+      i++
+      if (i == 6) clearInterval(int)
+    }, 1000);
   })
 });
 
