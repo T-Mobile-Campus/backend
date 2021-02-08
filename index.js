@@ -54,7 +54,7 @@ io.on("connection",  function (socket) {
       })     
       i++
       if (i == 6) clearInterval(int)
-    }, 1000);
+    }, 1000 + (2000/6));
   })
 });
 
