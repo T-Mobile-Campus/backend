@@ -67,7 +67,7 @@ sioux.eventEmitter.on("update", data => {
   }
 
 if (Math.max(...sioux.vibr)> sioux.threshold){
-  sioux.message("+33695382555", 'CA VIBRE TROP ' + Math.max(...sioux.vibr))
+  sioux.message("+33629052337", 'CA VIBRE TROP ' + Math.max(...sioux.vibr))
   }
 })
 
