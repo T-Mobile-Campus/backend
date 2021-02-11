@@ -7,9 +7,6 @@ const sioux = require('./ttn.js')
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({ extended: true }));
-// const cors = require('cors')
-
-// app.use(cors)
 
 app.use(router)
 
@@ -20,7 +17,7 @@ app.all('/', function(req, res, next) {
 });
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Sioux !')
 })
 
 const server = app.listen(port, () => {
@@ -30,13 +27,11 @@ const server = app.listen(port, () => {
 
 const io = require('socket.io')(server, {
   cors: {
-    // origin: "http://localhost:8080",
     methods: ["GET", "POST"]
   }
 });
 
 // SOCKETS 
-
 
 io.on("connection",  function (socket) {
   console.log(`${socket.id} connected. sent lum : ${sioux.lum}`);
@@ -44,6 +39,7 @@ io.on("connection",  function (socket) {
     lum: sioux.lum,
   })
   sioux.eventEmitter.on("update", async data => {
+    socket.emit("new_trame")
     sioux.lum = data.lum
     sioux.vibr = data.vibr
     let i = 0
@@ -54,7 +50,7 @@ io.on("connection",  function (socket) {
           val :sioux.vibr[i],
           date: new Date(Date.now())
         }
-      })     
+      })
       i++
       if (i == 6) clearInterval(int)
     }, 1000 + (2000/6));
